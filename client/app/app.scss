@@ -15,12 +15,17 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
     padding: 0.2em 0;
 }
 .hero-unit {
-  background: none repeat scroll 0 0 #adadad;
+  background: none repeat scroll 0 0 #adadad !important;
   color: #F5F5F5;
   padding: 30px 15px;
   position: relative;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.btn.btn-primary {
+  background-color: #4d4d4d;
+  border-color: #2a2a2a;
+  color: #FFFFFF;
 }
 
 // Component styles are injected through grunt

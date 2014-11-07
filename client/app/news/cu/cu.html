@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 ng-bind="title"></h1>
+
+    <div class="form-group">
+        <form id="cu" novalidate="true" ng-init="init()">
+            <div class="input-group">
+                <label for="title">Title</label>
+                <input id="title" type="text" required="true" placeholder="Enter title" ng-model="form.title">
+            </div>
+            <div class="input-group">
+                <label for="body">Body</label>
+                <textarea id="body" type="text" required="true" placeholder="Enter News body"
+                          ng-model="form.body"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="create_date">Creation Date</label>
+                <input id="create_date" type="date"  ng-model="form.create_date">
+            </div>
+            <div class="input-group">
+                <label for="update_date">Update Date</label>
+                <input id="update_date" type="date"  ng-model="form.update_date">
+            </div>
+            <div class="input-group">
+                <label for="active">Active</label>
+                <input id="active" type="checkbox" ng-model="form.active">
+            </div>
+            <div class="input-group">
+                <button type="submit" ng-click="save()" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+
+    </div>
+</div>

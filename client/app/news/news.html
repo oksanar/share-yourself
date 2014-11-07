@@ -1,14 +1,26 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="container">
     <h1 ng-bind="title"></h1>
-    <div class="news-list" ng-repeat="news_item in news">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title" ng-bind="news_item.title"></h3>
+    <div class="input-group" ng-if="isAdmin()">
+        <button class="btn btn-sm glyphicon glyphicon-plus" ng-click="add()"></button>
+    </div>
+    <div class="news-ctnr" ng-if="news !== 'undefined'">
+        <div class="news-list"  ng-repeat="news_item in news">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title" ng-bind="news_item.title"></h3>
+
+                </div>
+                <div class="panel-body" ng-bind="news_item.body"></div>
+                <div class="date" ><span>Create date: </span><span ng-bind="news_item.create_date"></span></div>
+                <div class="input-group" ng-if="isAdmin()">
+                    <button  class="btn btn-sm glyphicon glyphicon-edit" ng-click="edit(news_item._id)"></button>
+                    <button class="btn btn-sm glyphicon glyphicon-minus" ng-click="remove(news_item._id)"></button>
+                </div>
             </div>
-            <div class="panel-body" ng-bind="news_item.body"></div>
         </div>
     </div>
+
     <ul class="pagination pagination-small">
     	<li><a href="#">&laquo;</a></li>
     	<li><a href="#">1</a></li>

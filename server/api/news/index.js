@@ -1,4 +1,8 @@
 'use strict';
+/**
+ * URL: /news
+ * METHOD:
+ */
 
 var express = require('express');
 var controller = require('./news.controller');
